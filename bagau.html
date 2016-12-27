@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+		<canvas id="bagua" width="500" height="500">
+			
+			
+		</canvas>
+		<script type="text/javascript">
+			var deg = 0;
+			var r = 30;
+			var rl=200;
+			
+			
+			function taiji(){
+				var canvans = document.getElementById('bagua');
+				var content = canvans.getContext('2d');
+				
+				var colorA = "rgb(0,0,0)";
+				var colorB = "white";
+				
+				var px = Math.sin(deg) * r;
+				var py = Math.cos(deg) * r;
+				
+				content.clearRect(0,0,300,300);
+				
+				content.beginPath();
+				content.fillStyle = colorA;
+				content.arc(rl,rl,60,0.5*Math.PI + deg,1.5*Math.PI+deg,true);
+				content.closePath();
+				content.fill();
+				
+				content.fillStyle = colorB;
+				content.beginPath();
+				content.arc(rl,rl,60,1.5*Math.PI + deg,0.5*Math.PI + deg,true);
+				content.closePath();
+				content.fill();
+				
+				content.fillStyle = colorB;
+				content.beginPath();
+				content.arc(rl+px,rl-py,30,0.5*Math.PI + deg,1.5*Math.PI + deg,true);
+				content.closePath();
+				content.fill();
+				
+				content.fillStyle = colorA;
+				content.beginPath();
+				content.arc(rl-px,rl+py,30,1.5*Math.PI + deg,0.5*Math.PI + deg,true);
+				content.closePath();
+				content.fill();
+				
+				content.fillStyle = colorA;
+				content.beginPath();
+				content.arc(rl+px,rl-py,15,0,Math.PI*2,true);
+				content.closePath();
+				content.fill();
+				
+				content.fillStyle = colorB;
+				content.beginPath();
+				content.arc(rl-px,rl+py,15,0,Math.PI*2,true);
+				content.closePath();
+				content.fill();
+				deg+=0.1;
+			}
+			setInterval(taiji,100)
+			taiji();
+		</script>
+	</body>
+</html>

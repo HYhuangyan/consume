@@ -1,0 +1,25 @@
+﻿[
+	{   "image":"./css/img/hezuo_1.jpg",
+		"category":"私营企业",
+		"name":"北京无限新锐有限公司",
+		"url":"http://www.eoner.com/",
+		
+		"time":"2015年-2015年",
+
+		"reportto":"职位：普通实习生",
+		"peoples":"企业规模：people20",
+		"projects":"商企通视讯服务平台等"
+	},
+	{	"image":"./css/img/hezuo_2.jpg",
+		"category":"私营企业",
+		"name":"工作单位：蓝运方小",
+		"url":"http://www.zc511.net/",
+		
+		"time":"2015年-2016年",
+		"reportto":"职位：普通程序员",
+
+		"peoples":"企业规模：people21",
+		"projects":"zc511.com、53118.com、learn511.com、珍诚掌上医药、客户B2C项目手机版、业务员管理系统等"
+	}
+
+]

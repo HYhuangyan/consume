@@ -1,0 +1,56 @@
+
+@import './hhhh.scss';
+@import "./common/libs/swiper/animate.min.css";
+@import "./common/libs/swiper/swiper.min.css";
+@import "./utils/main.scss";
+@import "./utils/details.scss";
+@import "./utils/details.css";
+@import "./utils/datouwang.css"; 
+
+h1{color: pink;}
+
+#header {
+    background: url("img/beijing.png") 0px -55px no-repeat ;
+    background-size: 100%;
+    }
+#footer {
+    background: url("img/beijing.png") 0px -100px no-repeat ;
+    background-size: 100%;
+    }
+#wrapper {
+    background:url("./img/ture.jpg") ;}
+
+
+ body {
+        background: #eee;
+        font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+        font-size: 14px;
+        color:#000;
+        margin: 0;
+        padding: 0;
+        
+
+    }
+
+
+    .swiper-container {
+
+        width: 100%;
+        height: 568px;
+        background-color: red;
+         overflow: hidden;
+    }
+    .swiper-slide {
+        color: #fff;
+        font-size:50px;
+        height: 568px;
+        width: 320px;
+        text-align: center;
+        font-size: 18px;
+        display: flex;
+
+        align-items:center;       
+        justify-content:center;       
+        flex-direction:column;
+    }
+    

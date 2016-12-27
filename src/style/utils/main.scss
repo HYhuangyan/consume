@@ -1,0 +1,188 @@
+@charset "UTF-8";
+
+$height:200px;
+$imgwidth:200px;
+
+li{list-style: none;}
+.border_yuan{border-radius: 35px;line-height: 20px;border:1px #fff solid;padding: 7px;box-shadow: 0px 0px 1px 1px white;}
+.contain-toux{
+	position: relative;
+	.toux{position: absolute;background:url("./img/touxian (2).jpg") no-repeat;border-radius: 160px;background-size: 100%;};
+	.bian{
+		background:url('./img/line (7).png') no-repeat;
+		height: 192px;
+		width: 192px;
+		position: absolute;
+		top:0;
+		left: 0;
+
+	}
+}
+.rotate_contain{
+	height:$height;
+	width:$height;
+	background:url('./img/toux.png') no-repeat 10px 10px;
+	border-radius:$height;
+	position: relative;
+	display: flex;
+	justify-content:center;
+	align-items:center;
+
+	
+}
+
+.wrp_1{
+	
+	background:url('./img/bg_1.jpg') no-repeat;
+	background-size: 100% 100%;
+	.last_1{
+		text-align: center;
+		line-height: 40px;
+		color: #000;
+		height: 40px;
+		width: 240px;
+		font-weight: 600;
+		background: url('./img/first_1.png') no-repeat
+	}	
+}
+.toux{
+
+	border-radius: 160px;
+	background: url("") no-repeat center 10px red; background-size: 100%;top: 16px;left: 16px;}
+.wrp_2{
+	
+	background:url('./img/bg_2.jpg') no-repeat;
+	background-size: 100% 100%;
+
+	.title_1{
+			flex:7;
+			display: flex;
+			flex-direction:row;
+			align-items:center;
+	.title_font{
+		background:url("./img/title_kuai.png") no-repeat;
+		height: 95px;
+		width: 95px; 
+		color: #067B6B;
+		font-size: 30px;
+		text-align: center;
+		line-height: 95px;
+		font-weight: 900;
+		position: relative;
+		
+		#rotate_resume{position: absolute;top: 0px;left: 0;}
+
+			}
+	
+		}
+
+	.skil_list{
+		flex:2;
+		display: flex;
+		flex-direction:column;
+		align-items:center;
+		justify-ccontent:center;
+		.skill_1 ul{
+
+			display: flex;
+			flex-direction:row;
+			align-items:center;
+			.skill_num{flex:1;}
+			.skill_right{flex:1;}
+
+
+			
+		}
+		
+
+		.skill_line{
+			height: 4px;
+			width: 200px;
+			background:white;
+			border-radius: 7px;
+			box-shadow: 1px 1px 2px 2px white;
+		}
+
+	}
+
+
+
+}
+
+.skill_1 ul{width: 250px;}
+
+
+.skill_kuan{
+				
+				height: 40px;
+				width: 120px;
+				line-height: 40px;
+				text-align: center;
+				flex:3;
+				background:url("./img/skill_kuan.png") no-repeat; 
+				
+			}
+.wrp_3{
+	position: relative;
+	font-weight: 900;
+	justify-content:center;
+	flex-direction:column;
+	
+	p:not(:first-child){
+		height: 30px;
+		width: 250px;
+		line-height: 30px;
+
+		text-align: center;
+		background: url("./img/kuan (3).png") no-repeat;
+		flex:1;
+	}
+	background:url('./img/bg_3.jpg') no-repeat;		
+	background-size: 100% 100%;
+
+
+	.exprice_kuan{
+		position: absolute;
+		height: 600px;
+		width: 260px;
+		top: 145px;
+		left: 18px;
+		background:red;
+		background:url("./img/line (1).png") no-repeat;
+		background-size:54% 80%;
+	}
+
+}
+
+.wrp_4{
+
+	p{border: 1px dashed #fff;height: 40px;line-height: 40px;box-shadow: 0px 0px 1px 1px white;}	
+	.contcat_tel{border:1px dashed #fff;width: 100px; line-height: 40px;}
+	p:nth-child(1),p:nth-child(3),p:nth-child(6),p:nth-child(7){border:none;}
+	p:nth-child(6){border:1px pink solid;border-radius: 6px;box-shadow: 0px 0px 1px 1px white;}
+
+	
+}
+
+.last_contcat{
+		height: 18px;
+		width: 288px;
+		background:url("./img/line (4).png") center center no-repeat;
+	}
+
+@-webkit-keyframes reverseRotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(-360deg);}
+}
+@-webkit-keyframes rotataZ{
+    0%{-webkit-transform: rotateZ(0deg);}
+    100%{-webkit-transform: rotateZ(360deg);}
+}
+#musicControl { position:fixed;right:10px;top:20px;margin-top:0;display:inline-block;z-index:99999999}
+#musicControl a { display:inline-block;width: 25px; height: 25px;overflow:hidden;background:url('./img/mcbg.png') no-repeat;background-size:100%;}
+#musicControl a audio{width:100%;height:56px;}
+#musicControl a.stop { background-position:left bottom;}
+#musicControl a.on { background-position:0px 1px;-webkit-animation: reverseRotataZ 1.2s linear infinite;}
+#music_play_filter{width:100%;height:100%;overflow:hidden;position:fixed;top:0;left:0;z-index:99999998;}
+
+
