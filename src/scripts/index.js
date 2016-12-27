@@ -38,7 +38,7 @@ var swiper = new Swiper('.swiper-container',{
            clearInterval(timer);
           $(".swiper-container").hide();
           $("#detail_scro").show();
-        
+           $("#wrapper").addClass("skill");
          myScroll = new IScroll('#wrapper', { mouseWheel: true });
         document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
 
@@ -122,6 +122,8 @@ function skillPie(){
       var index = $(this).index();
       
       var jsonname = $(this).attr("id");
+      $("#wrapper").attr("class","");
+      $("#wrapper").addClass(jsonname);
 
       if(jsonname !="skill"){
         document.getElementById('pietu').style.display = "none" ;
@@ -143,7 +145,7 @@ function skillPie(){
       
       }
      
-     
+   
 
 
  myScroll.scrollTo(0,0);
@@ -152,40 +154,37 @@ function skillPie(){
 
  function addjson(jsonname){
         $.post('http://localhost:8000/'+jsonname, function(response){
-          var str="";
-
+          
+         
+          var str2="";
           for(var i=0;i<response.length;i++){  
-            str+="<li>";
+            str2+="<li>";
+            var str="";
+            var str1="";
+            str1+="<div class='div1'>";
+            str+="<div class='div2'>";
              for(var each in response[i]){
-                if(each === "name1" || each ==="tech" || each==="description" || each==="name"){
-                  str +="<p style='color:darkred;'>"+response[i][each]+"</p>"; 
-                }else if(each==="image"){
+                 if(each==="image"){
 
-                    str +="<img src = '"+response[i][each]+"'/>";
+                    str1 +="<img src = '"+response[i][each]+"'/>";
                
                 }else{
                   
                   str +="<p>"+response[i][each]+"</p>";  
- 
+                
                 }
               
                      }
-              str+="</li>";
+                     str1+="</div>"
+              str+="</div>";
+              str2 = str2+ str1+ str ;
              }
-            $("#scroller").find("ul").html(str);
+            $("#scroller").find("ul").html(str2);
             myScroll = new IScroll('#wrapper', { mouseWheel: true, checkDOMChanges:true });
             document.addEventListener('touchmove', function (e) { e.preventDefault(); }, false);
               
 
-            if(jsonname === "skill"){
-                    $("#wrapper").find("li").css("height","233px");
-                    $("#wrapper ul").find("img").css({"width":"100px","margin":"10px auto","display":"block"});
-              }else{
-                    $("#wrapper").find("li").css("height","500px");
-                    $("#wrapper ul").find("img").css({"width":"280px","margin":"10px auto","display":"block"});
-
-            }
-
+          
 
           setTimeout(function(){
             myScroll.scrollTo(0,0);
